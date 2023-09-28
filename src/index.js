@@ -43,3 +43,32 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+/*NAV HEADER START */
+const nav = document.querySelector('nav');
+const navLinks = nav.querySelectorAll('a');
+const navContents = Object.values(siteContent.nav);
+
+navLinks.forEach((link, index) => {
+  link.textContent = navContents[index];
+});
+/* NAV HEADER END */
+
+/* LOGO START */
+const logoImg = document.querySelector('#logo-img');
+logoImg.src = siteContent.images['logo-img'];
+/* LOGO END */
+
+/* CTA START */
+const ctaText = document.querySelectorAll('.cta-text h1');
+ctaText.textContent = siteContent.cta['h1'];
+
+const ctaButton = document.querySelector('.cta-button button');
+ctaButton.textContent = siteContent.cta['button'];
+
+const ctaImg = document.querySelector('.cta-img img');
+ctaImg.src = siteContent.images['cta-img'];
+/* CTA END */
+
+/* CONTENT START */
+const textContents = document.querySelector('.text-content h4');
+textContents.textContent = siteContent.anaIçerik['özellikler-h4'];
